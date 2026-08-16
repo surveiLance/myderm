@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const services = [
-  ["01", "Clinical dermatology", "Thoughtful consultations for skin concerns, guided by a qualified clinic professional."],
-  ["02", "Skin & facial care", "Personalized treatments designed around your skin, comfort, and long-term care."],
-  ["03", "Laser & aesthetics", "Modern aesthetic services delivered in a calm, professional clinic setting."],
+  ["01", "Clinical dermatology", "Thoughtful consultations for skin concerns, guided by a qualified clinic professional.", "/images/dermatology-concept.png", "Dermatology consultation tools in a clean clinic setting"],
+  ["02", "Skin & facial care", "Personalized treatments designed around your skin, comfort, and long-term care.", "/images/facial-care-concept.png", "A calm facial treatment room prepared for a client"],
+  ["03", "Laser & aesthetics", "Modern aesthetic services delivered in a calm, professional clinic setting.", "/images/laser-aesthetics-concept.png", "Modern aesthetic equipment in a clinic treatment room"],
 ];
 
 const Arrow = () => <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5" /></svg>;
@@ -28,10 +28,10 @@ export default function Home() {
         <p className="fine-print">All services begin with appropriate clinic guidance. Results vary by individual.</p>
       </div>
       <div className="hero-visual" aria-label="Placeholder for an approved clinic photograph">
-        <div className="visual-glow" /><div className="arch arch-back" />
-        <div className="arch arch-front"><div className="room-light" /><div className="treatment-bed"><span /></div><div className="side-table"><span /></div></div>
+        <Image className="hero-photo" src="/images/clinic-hero-concept.png" alt="Concept image of a calm dermatology treatment room" fill sizes="(max-width: 900px) 100vw, 53vw" priority />
+        <div className="photo-shade" />
         <div className="visual-note"><b>✦</b><p><strong>Care, made personal.</strong><small>A calm space for thoughtful skin care.</small></p></div>
-        <p className="placeholder-label">Private concept preview · approved clinic photography to follow</p>
+        <p className="placeholder-label">AI concept image · approved clinic photography to follow</p>
       </div>
     </section>
 
@@ -43,8 +43,8 @@ export default function Home() {
 
     <section className="services" id="services">
       <div className="section-heading"><div><p className="eyebrow"><span /> Our services</p><h2>Care that starts with <em>listening.</em></h2></div><p>From everyday skin concerns to aesthetic goals, explore clinic services designed around informed, individual care.</p></div>
-      <div className="service-grid">{services.map(([number,title,copy]) => <article className="service-card" key={number}>
-        <div className="service-top"><span>{number}</span><small>Consultation-led</small></div><div className={`service-art art-${number}`} aria-hidden="true"><i /><b /></div>
+      <div className="service-grid">{services.map(([number,title,copy,image,alt]) => <article className="service-card" key={number}>
+        <div className="service-top"><span>{number}</span><small>Consultation-led</small></div><div className="service-art"><Image src={image} alt={alt} fill sizes="(max-width: 900px) 100vw, 33vw" /></div>
         <h3>{title}</h3><p>{copy}</p><a href="tel:+639497289206">Ask about this service <Arrow /></a>
       </article>)}</div>
       <p className="preview-end">Preview scope · About, team, gallery, reviews, FAQ, and complete contact sections will follow after visual approval.</p>
