@@ -30,7 +30,6 @@ export default function Home() {
       <div className="hero-visual" aria-label="Placeholder for an approved clinic photograph">
         <Image className="hero-photo" src="/images/clinic-hero-concept.png" alt="Concept image of a calm dermatology treatment room" fill sizes="(max-width: 900px) 100vw, 53vw" priority />
         <div className="photo-shade" />
-        <div className="visual-note"><b>✦</b><p><strong>Care, made personal.</strong><small>A calm space for thoughtful skin care.</small></p></div>
         <p className="placeholder-label">AI concept image · approved clinic photography to follow</p>
       </div>
     </section>
