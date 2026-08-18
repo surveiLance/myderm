@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { CanvasText } from "@/components/ui/canvas-text";
+
+const heroWaveColors = ["#e3ae28", "#f7d77a", "#fff3c4", "#e3ae28", "#c48a12"];
 
 const services = [
   ["01", "Clinical dermatology", "Thoughtful consultations for skin concerns, guided by a qualified clinic professional.", "/images/dermatology-concept.png", "Dermatology consultation tools in a clean clinic setting"],
@@ -19,7 +22,7 @@ export default function Home() {
     <section className="hero" id="top">
       <div className="hero-copy">
         <p className="eyebrow"><span /> Aesthetics · Dermatology · Anti-aging</p>
-        <h1>Expert care for skin that feels like <em>you.</em></h1>
+        <h1>Expert care for skin that feels like <CanvasText text="you." className="hero-canvas-word" backgroundClassName="bg-[#e3ae28]" colors={heroWaveColors} animationDuration={14} lineGap={5} lineWidth={1.2} curveIntensity={18} /></h1>
         <p className="hero-intro">Dermatology and aesthetic care in a calm, welcoming clinic—thoughtfully tailored to your skin and your goals.</p>
         <div className="hero-actions">
           <a className="button" href="tel:+639497289206">Book an appointment <Arrow /></a>
