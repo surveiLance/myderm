@@ -30,3 +30,13 @@ nav a:hover{color:#fff;background:#ffffff14}
 @media(max-width:520px){.button,.text-link{width:100%}.hero-actions{width:100%;gap:12px}.header-cta{font-size:11px}.site-header{padding:0 18px}}
 .hero-canvas-word{color:var(--gold);font-style:italic;white-space:nowrap}
 @media(prefers-reduced-motion:reduce){.hero-canvas-word canvas{display:none}.hero-canvas-word>span.invisible{visibility:visible;color:var(--gold)}}
+
+/* Scroll-aware navigation */
+.header-shell{height:104px;position:relative;z-index:40;background:#2b4772}
+.site-header{width:100%;top:0;left:0;right:0;transition:height .3s ease,box-shadow .3s ease}
+.site-header.is-scrolled{position:fixed;height:82px;z-index:100;animation:header-slide-down .38s cubic-bezier(.22,1,.36,1) both;box-shadow:0 14px 38px #071d3840}
+.site-header.is-scrolled .brand{width:132px;height:58px}
+.site-header.is-scrolled .brand img{width:134px;height:134px}
+@keyframes header-slide-down{from{transform:translateY(-105%);opacity:.75}to{transform:translateY(0);opacity:1}}
+@media(max-width:900px){.header-shell{height:86px}.site-header.is-scrolled{height:76px}.site-header.is-scrolled .brand{width:112px;height:50px}.site-header.is-scrolled .brand img{width:114px;height:114px}}
+@media(prefers-reduced-motion:reduce){.site-header,.site-header.is-scrolled{transition:none;animation:none}}

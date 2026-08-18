@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CanvasText } from "@/components/ui/canvas-text";
+import { SiteHeader } from "@/components/site-header";
 
 const heroWaveColors = ["#e3ae28", "#f7d77a", "#fff3c4", "#e3ae28", "#c48a12"];
 
@@ -13,11 +14,7 @@ const Arrow = () => <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h1
 
 export default function Home() {
   return <main>
-    <header className="site-header">
-      <a className="brand" href="#top" aria-label="MyDerm home"><Image src="/myderm-logo.png" alt="MyDerm" width={160} height={160} priority /></a>
-      <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-      <a className="header-cta" href="tel:+639497289206">Book appointment <Arrow /></a>
-    </header>
+    <SiteHeader />
 
     <section className="hero" id="top">
       <div className="hero-copy">
