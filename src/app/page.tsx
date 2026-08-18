@@ -80,6 +80,6 @@ export default function Home() {
       <p>Clinic information and imagery require approval before publication. Additional team, gallery, reviews, FAQ, and booking sections can follow after visual and content confirmation.</p>
     </aside>
 
-    <footer><Image src="/myderm-logo.png" alt="MyDerm" width={120} height={120} /><p>Private website concept · Not an official published clinic website</p></footer>
+    <footer><Image src="/myderm-logo.png" alt="MyDerm" width={360} height={120} unoptimized /><p>Private website concept · Not an official published clinic website</p></footer>
   </main>;
 }

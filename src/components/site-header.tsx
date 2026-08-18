@@ -25,7 +25,7 @@ export function SiteHeader() {
     <div className="header-shell">
       <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
         <a className="brand" href="#top" aria-label="MyDerm home">
-          <Image src="/myderm-logo.png" alt="MyDerm" width={160} height={160} priority />
+          <Image src="/myderm-logo.png" alt="MyDerm" width={600} height={200} priority unoptimized />
         </a>
         <nav aria-label="Main navigation">
           <a href="#services">Services</a>
